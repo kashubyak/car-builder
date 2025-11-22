@@ -31,7 +31,7 @@ export class CarProduct {
 			visual: {
 				color: this.color,
 			},
-			addons: this.features.length > 0 ? this.features : ['Базова комплектація'],
+			addons: this.features.length > 0 ? this.features : ['Base model'],
 		}
 	}
 }
@@ -70,9 +70,7 @@ export class CarBuilder {
 	}
 
 	addFeature(feature: string): this {
-		if (!this.car.features.includes(feature)) {
-			this.car.features.push(feature)
-		}
+		if (!this.car.features.includes(feature)) this.car.features.push(feature)
 		return this
 	}
 
